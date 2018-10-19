@@ -3,7 +3,7 @@
 Todo:
  - [x] rearrange emoji
  - [x] finish first draft
- - [ ] proofread
+ - [x] proofread
  - [ ] get people to review
  
 
@@ -77,7 +77,7 @@ To print a file, we can use either `cat` (which stands for concatenate) or `less
 
 As you might expect, to view the file we created type in `less myFile.txt` or `cat myFile.txt`. 
 
-> :speech_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
+> :speech_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then press the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
 
 ### Editing the file (nano, vim, emacs) :writing_hand:
 To edit the file, we'll use a simple editor called `nano`. Most people don't use `nano` for anything but quick editing jobs, but editors that run in the terminal are notoriously unintuitive (however, it's still strongly recommended to learn how to use a terminal editor like `vim` or `emacs`).
@@ -93,10 +93,10 @@ In Unix systems, your **files are organized in directories**. To see the current
 
 `/user/azvorygi`
 
-What this is saying, is your current working directory is:
- - The "root" `/` directory. This is the root of your file system.
- - Which contains the directory `user/`
- - Which contains the directory `azvorygi/`, which is where you currently are. `azvorygi` is my username, so you'll probably see something different.
+You can read a path by starting from the left and going right. In order:
+ - First is the "root" `/` directory. This is the root of your file system. All files and folders are in `/`.
+ - `/` Contains `user/`
+ - `user/` contains the directory `azvorygi/`, which is where you currently are (your "working directory"). `azvorygi` is my username, so you'll probably see some other username there.
  
 ### Creating a folder (mkdir) :open_file_folder:
 Let's create a folder. The command for this is `mkdir`.
@@ -112,15 +112,19 @@ You should see somewhere in the output of `ls` your new folder.
 ### Copying and renaming files (cp, mv) :truck:
 Let's copy `myFile.txt` to `my-folder`. To do that we use the `cp` (copy) command. 
 
-`cp` takes some arguments, some source files, and a destination. Our source file is `myFile.txt`, our destination is `my-folder`. Altogether:
+`cp` takes some arguments: some source files, and a destination. Our source file is `myFile.txt`, our destination is `my-folder`. Altogether:
 
 `cp myFile.txt my-folder`
 
-As before, there should be no output if the command succeeded as expected, and otherwise it will print out some errors.
+As before, there should be no output if the command succeeded as expected, and if something went wrong it will print out some errors.
 
-Now, let's do a more advanced use of `ls`. Try using the command `ls my-folder`. This should list the contents of the `my-folder` directory. Also notice if you just use the `ls` command without specifying `my-folder`, `myFile.txt` is still present in the current directory.
+Now, let's do a more advanced use of `ls`. Try typing in `ls my-folder`. This should list the contents of the `my-folder` directory. We can see `ls` also takes an **optional argument**, which is the directory to list.
 
-To move a file, use `mv` (move), it works much the same as `cp`, except it deletes the original copy of the file. Note, you can use `mv` to rename a file: `mv oldFileName newFileName`.
+If you just use the `ls` command without specifying `my-folder`, `myFile.txt` is still present in the current directory. This is because we copied `myFile.txt`, the original remains in place.
+
+To move a file, use `mv` (move), it works much the same as `cp`, except it deletes the original copy of the file. 
+
+> :speech_balloon: You can use `mv` to rename a file: `mv oldFileName newFileName`.
 
 ### Changing directories (cd) :airplane:
 Lets go to this new folder we created. The command for that is `cd` (change directory).
@@ -131,7 +135,7 @@ If you use `pwd`, you should see your working directory has changed to the new d
 
 Lets go back to your home directory now. But instead of doing `cd /user/azvorygi` lets do `cd ..`. In the terminal, `..` means "go up one directory". So if you wanted to go up two directories, you could write `cd ../..`. Alternatively, you could write `cd ~` to go back to your home directory. 
 
-> :speech_balloon: Remember that `~` refers to your home directory in the terminal.
+> :speech_balloon: Remember that `~` refers to your home directory in the terminal. We could write something like `cd ~/my-folder` if we wanted to.
 
 ### Deleting directories and files (rm, rmdir) :no_entry:
 Now that we are back in our home directory, lets delete `my-folder`. We'll use the `rmdir` (remove directory) command.
@@ -155,19 +159,22 @@ If `rmdir` doesn't error, when you type in `ls` you should not see `my-folder`.
 
 On Ubuntu, or similar linux distributions, to install a package or command, we use the command `apt`. This is Ubuntu's *Advanced Packaging Tool*.
 
-To install the package `sl` (steam locomotive)
-`apt install sl`
+To install the package `sl` (steam locomotive):
+
+`sudo apt install sl`
+
+You'll notice the `sudo` before the `apt install sl`. `sudo` means "run the following command as a superuser". Not just any user can install programs, you need the right security priviliges to install this program. If you're on a CSCF machine, or other machine you don't control, you won't have the sudo password and wont be able to install programs.
 
 > :speech_balloon: In old systems, or in lots of online documentation, the command `apt-get` is used instead of `apt`. They're basically equivalent, but `apt` is the new and improved version.
 
-After it's done installing, let's use the command, but I won't spoil the surprise!
+After it's done installing, let's use the command, but I won't spoil the surprise of what it does!
 
 
 > :apple: For MacOS, you'll be using a program called [Homebrew](https://brew.sh/) to install programs. The command you'll use is `brew install` to install programs, but I won't cover how to install Homebrew here.
 
 ### Your command history (history) :book:
 
-To see the history of the commands you've run, use the `history command`.
+To see the history of the commands you've run, use the `history` command.
 
 ### Further learning! :fireworks:
 I'll provide a list of useful commands, programs or concepts that will be useful in your journey to Unix mastership:
