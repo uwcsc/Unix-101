@@ -3,7 +3,7 @@
 We'll be covering these topics:
  - Why people use the shell 🤔
  - Basics of shell interaction 
-   - `Less`, basic editing like `nano` maybe?, `cd`, file system, running programs
+   - `echo`, `Less`, basic editing like `nano` maybe?, `cd`, file system, running programs
  - Some fun commands
    - How to install new programs (Mac / Linux) :hammer_and_wrench:
  - Writing a simple script :writ
@@ -13,7 +13,7 @@ We'll be covering these topics:
  
 
 ## Why people use the shell
-The shell (also called terminal, or command line) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
+The shell (also called terminal, or command line, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
 Lots of programs only really work for the command line, and almost every software professional (💰) knows their way around it.
 
 ## Basics of shell interaction
@@ -22,20 +22,36 @@ Lots of programs only really work for the command line, and almost every softwar
 ### Opening the terminal
 Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a Terminal. Otherwise, this might depend on your Linux distribution.
 
-MacOS :apple:: Open up the application called Terminal. In the future, if you start to use the terminal more, you may want to isntall [iTerm2](https://www.iterm2.com/), as it's much more powerful and nicer.
+MacOS :apple:: Open up the application called Terminal. In the future, if you start to use the terminal more, you may want to install [iTerm2](https://www.iterm2.com/), as it's much more powerful and nicer.
 
-### First things
-When you open the terminal, you will be greeted with what's called the **prompt**. This is where you enter commands.
+### The terminal prompt
+When you open the terminal, you will see something like this (The screenshot was taken on Ubuntu 17.04):
 
-`username@machine-name:your-working-path`
+![Terminal Screenshot](https://raw.githubusercontent.com/zvory/Unix-101/master/TerminalScreenshot.png)
 
-If you run a Linux distribution, and you are only using the GUI, you are missing out. The Linux terminal is an extremely powerful tool that goes well beyond the GUI. Writing commands might seem scary for a beginner, but you will soon get the hang of it. In this guide, you will find the most important Linux commands, to use the terminal like a pro.
+This is the terminal prompt. This is where you enter commands. You can see there's some text there already, the terminal will print this out when it's ready to accept commands from you, the default text it prints out is:
 
+`username@machine-name:your-working-directory`
 
-We have prepared this guide on Linux Mint 18.1 and Ubuntu 16.04 LTS.
+### Hello world (echo)
 
-The basic Linux commands, however, are universal, and they should work on any past and future distribution. They will even work with non-Linux operating systems based on Unix, such as FreeBSD, or the macOS / OS X terminal.
+Let's try to print "Hello world!". The terminal command to display a line of text is `echo`. So lets put this command into the terminal:
 
-Table of Contents [show]
+`echo "Hello world!"`
 
+And press enter. You should see the text "Hello world!" printed back at you.
+
+Congrats, you've made a Hello world! program in the terminal.
+
+### Creating a file (touch)
+Let's make a file. In a GUI program with a nice user interface, we might right click in the program, and click 'New File', but we can't do that in the terminal.
+
+Instead we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
+
+Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created succesfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that if a program doesn't output anything, it executed succesfuly.
+
+### Finding the file we just created (ls)
+Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in the `your-working-directory`.
+
+Lets list the files in our current directory. To do this, we use the command called `ls` (Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
 
