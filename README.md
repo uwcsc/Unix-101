@@ -40,6 +40,8 @@ This is the terminal prompt. This is where you enter commands. You can see there
 
 `username@machine-name:your-working-directory`
 
+You might see that the `your-working-directory` part of the prompt is `~`. In the terminal, `~` is shorthand for your **home directory**.
+
 ### Hello world (echo) :speaking_head:
 
 Let's try to print "Hello world!". The terminal command to display a line of text is `echo`. So lets put this command into the terminal:
@@ -57,7 +59,7 @@ Instead we will use a command called `touch`. This will create an empty file for
 
 Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created succesfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that if a program doesn't output anything, it executed succesfuly.
 
-### Finding the file we just created (ls)  :mag:
+### Finding the file we just created (ls) :mag:
 Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in the `your-working-directory`.
 
 Lets list the files in our current directory. To do this, we use the command called `ls` 
@@ -72,14 +74,14 @@ After we use the `ls` command, we will see a bunch of file and folder names in o
 
 Most importantly, we will see the name of the file we created earlier, `myFile.txt`.
 
-### Printing the file we created :page_facing_up:
+### Printing the file we created (less, cat) :page_facing_up:
 To print a file, we can use either `cat` (which stands for concatenate) or `less` (the opposite of `more`, which is an old file viewer program).
 
 As you might expect, to view the file we created type in `less myFile.txt` or `cat myFile.txt`. 
 
 > :thought_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
 
-### Editing the file :writing_hand:
+### Editing the file (nano, vim, emacs) :writing_hand:
 To edit the file, we'll use a simple editor called `nano`. Most people don't use `nano` for anything but quick editing jobs, but editors that run in the terminal are notoriously unintuitive (however, it's still strongly recommended to learn how to use a terminal editor like `vim` or `emacs`).
 
 `nano myFile.txt`
@@ -88,17 +90,17 @@ Once here, type in some text, then press Ctrl+x to exit the program, then type i
 
 Print the file again using either `less` or `cat`, and you should see the text you just entered.
 
-### Directories :file_folder:
+### Directories (pwd) :file_folder:
 In Unix systems, your files are organized in directories. To see the current directory you are working in, use the `pwd` command. It will print a **path** which looks something like:
 
 `/user/azvorygi`
 
 What this is saying, is your current working directory is:
- - The "root" `/` directory
+ - The "root" `/` directory. This is the root of your file system.
  - Which contains the directory `user/`
  - Which contains the directory `azvorygi/`, which is where you currently are. `azvorygi` is my username, so you'll probably see something different.
  
-### Creating a folder :open_file_folder:
+### Creating a folder (mkdir) :open_file_folder:
 Let's create a folder. The command for this is `mkdir`.
 
 `mkdir my-folder`
@@ -109,7 +111,7 @@ Now, lets check the contents of our current directory. Try to remember the comma
 
 You should see somewhere in the output of `ls` your new folder.
 
-### Copying and renaming files :truck:
+### Copying and renaming files (cp, mv) :truck:
 Let's copy `myFile.txt` to `my-folder`. To do that we use the `cp` (copy) command. 
 
 `cp` takes some arguments, some source files, and a destination. Our source file is `myFile.txt`, our destination is `my-folder`. Altogether:
@@ -122,3 +124,15 @@ Now, let's do a more advanced use of `ls`. Try using the command `ls my-folder`.
 
 To move a file, use `mv` (move), it works much the same as `cp`, except it deletes the original copy of the file. Note, you can use `mv` to rename a file: `mv oldFileName newFileName`.
 
+### Changing directories (cd) :airplane:
+Lets go to this new folder we created. The command for that is `cd` (change directory).
+
+`cd my-folder`.
+
+If you use `pwd`, you should see your working directory has changed to the new directory (something like `/user/azvorygi/my-folder`. If you use `ls`, you should see just the file `myFile.txt`. 
+
+Lets go back to your home directory now. But instead of doing `cd /user/azvorygi` lets do `cd ..`. In the terminal, `..` means "go up one directory". So if you wanted to go up two directories, you could write `cd ../..`. Alternatively, you could write `cd ~` to go back to your home directory. 
+
+> :thought:balloon: Remember that `~` refers to your home directory in the terminal.
+
+### Deleting directories and files (rm, rmdir) :
