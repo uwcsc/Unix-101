@@ -17,7 +17,7 @@ We'll be covering these topics:
  - Further learning! `head, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
  
 
-## Why people use the shell
+## Why people use the shell :woman_shrugging:
 The shell (also called terminal, or command line, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
 Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it.
 
