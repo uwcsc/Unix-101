@@ -6,6 +6,12 @@ Todo:
  - [x] proofread
  - [ ] get people to review
  
+Things I might add:
+ - `*` globbing pattern
+ - recursive deletion
+ - `man`
+ - writing scripts
+ - 
 
 We'll be covering these topics:
  - Why people use the shell 🤔
