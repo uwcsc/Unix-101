@@ -1,9 +1,16 @@
 # Unix 101.
 
+Todo:
+ - [x] rearrange emoji
+ - [ ] finish first draft
+ - [ ] proofread
+ - [ ] get people to review
+ 
+
 We'll be covering these topics:
  - Why people use the shell 🤔
  - Basics of shell interaction 
-   - `echo`, `touch`, `ls`, `less`, `mv`, `cp`, `mkdir`, `cd`, `rmdir`, and `man`
+   - `echo`, `touch`, `ls`, `less`, `mkdir`, `mv`, `cp`, `cd`, `rmdir`, and `man`
  - Super basic `vim` intro
  - Some fun commands :slightly_smiling_face:
  - How to install new programs (Mac / Linux) :hammer_and_wrench:
@@ -43,7 +50,7 @@ And press enter. You should see the text "Hello world!" printed back at you.
 
 Congrats :party_popper:, you've made a Hello world! program in the terminal.
 
-### Creating a file (touch) :writing_hand:
+### Creating a file (touch) :point_down:
 Let's make a file. In a GUI program with a nice user interface, we might right click in the program, and click 'New File', but we can't do that in the terminal.
 
 Instead we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
@@ -72,7 +79,7 @@ As you might expect, to view the file we created type in `less myFile.txt` or `c
 
 > :thought_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
 
-### Editing the file
+### Editing the file :writing_hand:
 To edit the file, we'll use a simple editor called `nano`. Most people don't use `nano` for anything but quick editing jobs, but editors that run in the terminal are notoriously unintuitive (however, it's still strongly recommended to learn how to use a terminal editor like `vim` or `emacs`).
 
 `nano myFile.txt`
@@ -81,8 +88,37 @@ Once here, type in some text, then press Ctrl+x to exit the program, then type i
 
 Print the file again using either `less` or `cat`, and you should see the text you just entered.
 
-### Directories
+### Directories :file_folder:
 In Unix systems, your files are organized in directories. To see the current directory you are working in, use the `pwd` command. It will print a **path** which looks something like:
 
 `/user/azvorygi`
+
+What this is saying, is your current working directory is:
+ - The "root" `/` directory
+ - Which contains the directory `user/`
+ - Which contains the directory `azvorygi/`, which is where you currently are. `azvorygi` is my username, so you'll probably see something different.
+ 
+### Creating a folder :open_file_folder:
+Let's create a folder. The command for this is `mkdir`.
+
+`mkdir my-folder`
+
+> :thought_balloon: Files in Unix systems can contains, dots, dashes, or even emoji 😃!. You can even have spaces, but that's [a little more complicated](https://www.hecticgeek.com/2014/02/spaces-file-names-command-line/).
+
+Now, lets check the contents of our current directory. Try to remember the command to do that. If you don't remember, it's `ls`.
+
+You should see somewhere in the output of `ls` your new folder.
+
+### Copying and renaming files :truck:
+Let's copy `myFile.txt` to `my-folder`. To do that we use the `cp` (copy) command. 
+
+`cp` takes some arguments, some source files, and a destination. Our source file is `myFile.txt`, our destination is `my-folder`. Altogether:
+
+`cp myFile.txt my-folder`
+
+As before, there should be no output if the command succeeded as expected, and otherwise it will print out some errors.
+
+Now, let's do a more advanced use of `ls`. Try using the command `ls my-folder`. This should list the contents of the `my-folder` directory. Also notice if you just use the `ls` command without specifying `my-folder`, `myFile.txt` is still present in the current directory.
+
+To move a file, use `mv` (move), it works much the same as `cp`, except it deletes the original copy of the file. Note, you can use `mv` to rename a file: `mv oldFileName newFileName`.
 
