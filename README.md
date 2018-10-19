@@ -168,5 +168,13 @@ To see the history of the commands you've run, use the `history command`.
 
 ### Further learning! :fireworks:
 I'll provide a list of useful commands, programs or concepts that will be useful in your journey to Unix mastership:
- - 
-`head, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
+ - `head`, `tail`, if you don't want to see everything in a large file, you can use this to print the first/last *n* lines of a file. Example use: `head myFile.txt`.
+ - `ssh`, [is used to remotely access another computer](https://www.ssh.com/ssh/command/). This is extensively used, and `ssh` backs a lot of services.
+ - `git`, [is used for version control](http://rogerdudler.github.io/git-guide/). If you plan to be in software, you *will* use `git` in your career. 
+ - `tmux`, [is used to have multiple panels open in one terminal window, or keeping sessions running](https://hackernoon.com/a-gentle-introduction-to-tmux-8d784c404340). 
+ - `scp`, [is like `cp`, but you can use it over networks](http://www.hypexr.org/linux_scp_help.php)
+ - `vim`, is a very powerful and common terminal text editor.
+ - `wget`/`curl` are very similar programs that are used to download files off the internet. Try using `wget http://csclub.uwaterloo.ca/~azvorygi/wget`
+ - `.bash_aliases` you can put useful aliases here. For example, I added in `alias l='ls'`, and now I can type `l` instead of `ls`.
+ - `grep`, is used for searching text. 
+ - [Hidden files](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory)
