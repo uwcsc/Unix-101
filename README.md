@@ -3,18 +3,18 @@
 We'll be covering these topics:
  - Why people use the shell 🤔
  - Basics of shell interaction 
-   - `echo`, `Less`, basic editing like `nano` maybe?, `cd`, file system, running programs
- - Some fun commands
-   - How to install new programs (Mac / Linux) :hammer_and_wrench:
- - Writing a simple script :writ
- - Background tasks (?)
- - `ssh`
- - Further learning! Ssh, git, scp, tmux
+   - `echo`, `touch`, `ls`, `less`, `mv`, `cp`, `mkdir`, `cd`, `rmdir`, and `man`
+ - Super basic `vim` intro
+ - Some fun commands :joy:
+ - How to install new programs (Mac / Linux) :hammer_and_wrench:
+ - Writing a simple script :writing_hand:
+ - `history`
+ - Further learning! `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, hidden files.
  
 
 ## Why people use the shell
 The shell (also called terminal, or command line, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
-Lots of programs only really work for the command line, and almost every software professional (💰) knows their way around it.
+Lots of programs only really work for the command line, and almost every software professional (:woman_technologist:) knows their way around it.
 
 ## Basics of shell interaction
 
@@ -33,7 +33,7 @@ This is the terminal prompt. This is where you enter commands. You can see there
 
 `username@machine-name:your-working-directory`
 
-### Hello world (echo)
+### Hello world (echo) :speaking_head:
 
 Let's try to print "Hello world!". The terminal command to display a line of text is `echo`. So lets put this command into the terminal:
 
@@ -41,17 +41,34 @@ Let's try to print "Hello world!". The terminal command to display a line of tex
 
 And press enter. You should see the text "Hello world!" printed back at you.
 
-Congrats, you've made a Hello world! program in the terminal.
+Congrats :party_popper:, you've made a Hello world! program in the terminal.
 
-### Creating a file (touch)
+### Creating a file (touch) :writing_hand:
 Let's make a file. In a GUI program with a nice user interface, we might right click in the program, and click 'New File', but we can't do that in the terminal.
 
 Instead we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
 
 Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created succesfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that if a program doesn't output anything, it executed succesfuly.
 
-### Finding the file we just created (ls)
+### Finding the file we just created (ls)  :mag:
 Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in the `your-working-directory`.
 
-Lets list the files in our current directory. To do this, we use the command called `ls` (Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
+Lets list the files in our current directory. To do this, we use the command called `ls` 
+
+ > :thought_balloon: `ls` Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
+
+At this point, our terminal might look something like this (The specific files and folders you see will probably be different from mine):
+
+![Terminal Screenshot](https://raw.githubusercontent.com/zvory/Unix-101/master/lsOutput.png)
+
+After we use the `ls` command, we will see a bunch of file and folder names in our terminal.
+
+Most importantly, we will see the name of the file we created earlier, `myFile.txt`.
+
+### Printing the file we created :page_facing_up:
+To print a file, we can use either `cat` (which stands for concatenate) or `less` (the opposite of `more`, which is an old file viewer program).
+
+As you might expect, to view the file we created type in `less myFile.txt` or `cat myFile.txt`. 
+
+> :though_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
 
