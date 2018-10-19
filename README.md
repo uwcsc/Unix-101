@@ -5,7 +5,7 @@ We'll be covering these topics:
  - Basics of shell interaction 
    - `echo`, `touch`, `ls`, `less`, `mv`, `cp`, `mkdir`, `cd`, `rmdir`, and `man`
  - Super basic `vim` intro
- - Some fun commands :joy:
+ - Some fun commands :slightly_smiling_face:
  - How to install new programs (Mac / Linux) :hammer_and_wrench:
  - Writing a simple script :writing_hand:
  - `history`
@@ -14,7 +14,7 @@ We'll be covering these topics:
 
 ## Why people use the shell
 The shell (also called terminal, or command line, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
-Lots of programs only really work for the command line, and almost every software professional (:woman_technologist:) knows their way around it.
+Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it.
 
 ## Basics of shell interaction
 
@@ -70,5 +70,19 @@ To print a file, we can use either `cat` (which stands for concatenate) or `less
 
 As you might expect, to view the file we created type in `less myFile.txt` or `cat myFile.txt`. 
 
-> :though_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
+> :thought_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
+
+### Editing the file
+To edit the file, we'll use a simple editor called `nano`. Most people don't use `nano` for anything but quick editing jobs, but editors that run in the terminal are notoriously unintuitive (however, it's still strongly recommended to learn how to use a terminal editor like `vim` or `emacs`).
+
+`nano myFile.txt`
+
+Once here, type in some text, then press Ctrl+x to exit the program, then type in `Y` to save the file when you're prompted. Then, `nano` will ask you what file to write to, just press enter to default to `myFile.txt`.
+
+Print the file again using either `less` or `cat`, and you should see the text you just entered.
+
+### Directories
+In Unix systems, your files are organized in directories. To see the current directory you are working in, use the `pwd` command. It will print a **path** which looks something like:
+
+`/user/azvorygi`
 
