@@ -162,6 +162,9 @@ To install the package `sl` (steam locomotive)
 
 After it's done installing, let's use the command, but I won't spoil the surprise!
 
+
+> :apple: For MacOS, you'll be using a program called [Homebrew](https://brew.sh/) to install programs. The command you'll use is `brew install` to install programs, but I won't cover how to install Homebrew here.
+
 ### Your command history (history) :book:
 
 To see the history of the commands you've run, use the `history command`.
