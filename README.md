@@ -11,12 +11,10 @@ We'll be covering these topics:
  - Why people use the shell 🤔
  - Basics of shell interaction 
    - `echo`, `touch`, `ls`, `less`, `mkdir`, `mv`, `cp`, `cd`, `rmdir`, and `man`
- - Super basic `vim` intro
- - Some fun commands :slightly_smiling_face:
  - How to install new programs (Mac / Linux) :hammer_and_wrench:
- - Writing a simple script :writing_hand:
+ - Some fun commands :slightly_smiling_face:
  - `history`
- - Further learning! `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, hidden files.
+ - Further learning! `head, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
  
 
 ## Why people use the shell
@@ -64,7 +62,7 @@ Remember the `your-working-directory` part of the terminal prompt we talked abou
 
 Lets list the files in our current directory. To do this, we use the command called `ls` 
 
- > :thought_balloon: `ls` Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
+ > :speech_balloon: `ls` Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
 
 At this point, our terminal might look something like this (The specific files and folders you see will probably be different from mine):
 
@@ -79,7 +77,7 @@ To print a file, we can use either `cat` (which stands for concatenate) or `less
 
 As you might expect, to view the file we created type in `less myFile.txt` or `cat myFile.txt`. 
 
-> :thought_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
+> :speech_balloon: Note, you don't have to type in the entire filename, try typing in `less myF` and then pressing the Tab key. Your shell will try to autocomplete the filename, saving you time. Your shell will also try to do this with directories.
 
 ### Editing the file (nano, vim, emacs) :writing_hand:
 To edit the file, we'll use a simple editor called `nano`. Most people don't use `nano` for anything but quick editing jobs, but editors that run in the terminal are notoriously unintuitive (however, it's still strongly recommended to learn how to use a terminal editor like `vim` or `emacs`).
@@ -105,7 +103,7 @@ Let's create a folder. The command for this is `mkdir`.
 
 `mkdir my-folder`
 
-> :thought_balloon: Files in Unix systems can contains, dots, dashes, or even emoji 😃!. You can even have spaces, but that's [a little more complicated](https://www.hecticgeek.com/2014/02/spaces-file-names-command-line/).
+> :speech_balloon: Files in Unix systems can contains, dots, dashes, or even emoji 😃!. You can even have spaces, but that's [a little more complicated](https://www.hecticgeek.com/2014/02/spaces-file-names-command-line/).
 
 Now, lets check the contents of our current directory. Try to remember the command to do that. If you don't remember, it's `ls`.
 
@@ -133,6 +131,42 @@ If you use `pwd`, you should see your working directory has changed to the new d
 
 Lets go back to your home directory now. But instead of doing `cd /user/azvorygi` lets do `cd ..`. In the terminal, `..` means "go up one directory". So if you wanted to go up two directories, you could write `cd ../..`. Alternatively, you could write `cd ~` to go back to your home directory. 
 
-> :thought:balloon: Remember that `~` refers to your home directory in the terminal.
+> :speech_balloon: Remember that `~` refers to your home directory in the terminal.
 
-### Deleting directories and files (rm, rmdir) :
+### Deleting directories and files (rm, rmdir) :no_entry:
+Now that we are back in our home directory, lets delete `my-folder`. We'll use the `rmdir` (remove directory) command.
+
+`rmdir my-folder`
+
+:exclamation: Oh no, an error message!
+`rmdir: failed to remove 'my-folder/': Directory not empty`
+
+Ahh, we should delete the `myFile.txt` we put in the directory. We'll use the `rm` (remove) command.
+
+`rm my-folder/myFile.txt`
+
+Now lets try to use the `rmdir` command again:
+
+`rmdir my-folder`
+
+If `rmdir` doesn't error, when you type in `ls` you should not see `my-folder`.
+
+### Installing a command/program/package (apt, apt-get, brew) :construction_worker:
+
+On Ubuntu, or similar linux distributions, to install a package or command, we use the command `apt`. This is Ubuntu's *Advanced Packaging Tool*.
+
+To install the package `sl` (steam locomotive)
+`apt install sl`
+
+> :speech_balloon: In old systems, or in lots of online documentation, the command `apt-get` is used instead of `apt`. They're basically equivalent, but `apt` is the new and improved version.
+
+After it's done installing, let's use the command, but I won't spoil the surprise!
+
+### Your command history (history) :book:
+
+To see the history of the commands you've run, use the `history command`.
+
+### Further learning! :fireworks:
+I'll provide a list of useful commands, programs or concepts that will be useful in your journey to Unix mastership:
+ - 
+`head, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
