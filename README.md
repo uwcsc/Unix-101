@@ -2,7 +2,7 @@
 
 Todo:
  - [x] rearrange emoji
- - [ ] finish first draft
+ - [x] finish first draft
  - [ ] proofread
  - [ ] get people to review
  
@@ -14,7 +14,7 @@ We'll be covering these topics:
  - How to install new programs (Mac / Linux) :hammer_and_wrench:
  - Some fun commands :slightly_smiling_face:
  - `history`
- - Further learning! `head, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
+ - Further learning! `head`, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
  
 
 ## Why people use the shell :woman_shrugging:
