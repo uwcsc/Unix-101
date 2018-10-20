@@ -5,6 +5,7 @@ Todo:
  - [x] finish first draft
  - [x] proofread
  - [x] get people to review
+ - [ ] sell people harder on why they should care
  - [ ] alt+f2 for terminals, cmd+space on mac
  - [ ] input can be broken up into commands, arguments, and flags
  - [ ] navigating `less` output
