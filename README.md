@@ -5,8 +5,16 @@ Todo:
  - [x] finish first draft
  - [x] proofread
  - [x] get people to review
- - [x] exercises
- - [x] teach them to figure things out for themselves
+ - [ ] alt+f2 for terminals, cmd+space on mac
+ - [ ] input can be broken up into commands, arguments, and flags
+ - [ ] navigating `less` output
+ - [ ] demo of SSH into instance running intensive program
+ - [ ] `--help` `-h` flags
+ - [ ] warn about rm being not undoable
+ - [ ] exercises
+ - [ ] teach them to figure things out for themselves
+ - [ ] integrate tips from `/users/jy2wong/unix101`
+ - [ ] put `/users/jy2wong/unix101` into repo
  
  
 Things I might add:
