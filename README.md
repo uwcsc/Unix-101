@@ -4,7 +4,10 @@ Todo:
  - [x] rearrange emoji
  - [x] finish first draft
  - [x] proofread
- - [ ] get people to review
+ - [x] get people to review
+ - [x] exercises
+ - [x] teach them to figure things out for themselves
+ 
  
 Things I might add:
  - `*` globbing pattern
