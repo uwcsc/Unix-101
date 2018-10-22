@@ -7,11 +7,11 @@ Todo:
  - [x] get people to review
  - [x] sell people harder on why they should care
  - [x] alt+f2 for terminals, cmd+space on mac
- - [ ] input can be broken up into commands, arguments, and flags
+ - [x] input can be broken up into commands, arguments, and flags
  - [ ] navigating `less` output
- - [ ] demo of SSH into instance running intensive program
+ - [x] demo of SSH into instance running intensive program
  - [ ] `--help` `-h` flags
- - [ ] warn about rm being not undoable
+ - [x] warn about rm being not undoable
  - [ ] exercises
  - [ ] teach them to figure things out for themselves
  - [ ] integrate tips from `/users/jy2wong/unix101`
@@ -43,7 +43,7 @@ Lots of programs only really work for the command line, and almost every softwar
 
 
 ### Opening the terminal
-Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution.
+Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution. If you're using the CSCF computers, and your terminal has a `%` in it, type `bash` and hit enter to open up the bash shell.
 
 MacOS :apple:: Open up the application called Terminal (you can use Cmd+Space and type in Terminal). In the future, if you start to use the terminal more, you may want to install [iTerm2](https://www.iterm2.com/), as it's nicer and more powerful than the default.
 
@@ -68,12 +68,17 @@ And press enter. You should see the text "Hello world!" printed back at you.
 
 Congrats :tada:, you've made a Hello world! program in the terminal.
 
+Here's a breakdown of what you just did:
+
+`echo` is the name of the program you're running. `echo` takes what's called **arguments**, this is the input to the program. In this case, we're inputting `"Hello world!"` as the first and only argument. Echo can take multiple arguments, why don't you try getting that to work?
+
 ### Creating a file (touch) :point_down:
 Let's make a file. In a GUI program with a nice user interface, we might right click in the file explorer, and click 'New File', but we can't do that in the terminal.
 
 Instead we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
 
 Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created succesfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that **if a program doesn't output anything, it executed succesfuly**.
+
 
 ### Finding the file we just created (ls) :mag:
 Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in `your-working-directory`.
@@ -173,6 +178,8 @@ Now lets try to use the `rmdir` command again:
 
 If `rmdir` doesn't error, when you type in `ls` you should not see `my-folder`.
 
+> :boom: :bangbang: `rm` is NOT undoable. This ain't windows with a recycle bin. Be careful and *always* double check what you're about to rm. You can do things like `rm /` (remember `/` is the root directory, so you could delete your entire hard drive by accident) and it's undoable!
+
 ### Installing a command/program/package (apt, apt-get, brew) :construction_worker:
 
 On Ubuntu, or similar linux distributions, to install a package or command, we use the command `apt`. This is Ubuntu's *Advanced Packaging Tool*.
@@ -193,6 +200,13 @@ After it's done installing, let's use the command, but I won't spoil the surpris
 ### Your command history (history) :book:
 
 To see the history of the commands you've run, use the `history` command.
+
+### Mildly interesting demo (ssh)
+We're going to use `ssh` to log into one of the Computer Science Club computers. 
+
+`ssh $acount@high-fructose-corn-syrup.csclub.uwaterloo.ca`
+
+Then run `htop`.
 
 ### Further learning! :fireworks:
 I'll provide a list of useful commands, programs or concepts that will be useful in your journey to Unix mastership:
