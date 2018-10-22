@@ -5,8 +5,8 @@ Todo:
  - [x] finish first draft
  - [x] proofread
  - [x] get people to review
- - [ ] sell people harder on why they should care
- - [ ] alt+f2 for terminals, cmd+space on mac
+ - [x] sell people harder on why they should care
+ - [x] alt+f2 for terminals, cmd+space on mac
  - [ ] input can be broken up into commands, arguments, and flags
  - [ ] navigating `less` output
  - [ ] demo of SSH into instance running intensive program
@@ -37,15 +37,15 @@ We'll be covering these topics:
 
 ## Why people use the shell :woman_shrugging:
 The **shell** (also called **terminal**, or **command line**, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
-Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it.
+Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it. It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
 
 ## Basics of shell interaction
 
 
 ### Opening the terminal
-Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Otherwise, this might depend on your Linux distribution.
+Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution.
 
-MacOS :apple:: Open up the application called Terminal. In the future, if you start to use the terminal more, you may want to install [iTerm2](https://www.iterm2.com/), as it's nicer and more powerful than the default.
+MacOS :apple:: Open up the application called Terminal (you can use Cmd+Space and type in Terminal). In the future, if you start to use the terminal more, you may want to install [iTerm2](https://www.iterm2.com/), as it's nicer and more powerful than the default.
 
 ### The terminal prompt
 When you open the terminal, you will see something like this (The screenshot was taken on Ubuntu 17.04):
