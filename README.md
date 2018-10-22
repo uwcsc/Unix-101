@@ -1,30 +1,5 @@
 # Unix 101.
 
-Todo:
- - [x] rearrange emoji
- - [x] finish first draft
- - [x] proofread
- - [x] get people to review
- - [x] sell people harder on why they should care
- - [x] alt+f2 for terminals, cmd+space on mac
- - [x] input can be broken up into commands, arguments, and flags
- - [ ] navigating `less` output
- - [x] demo of SSH into instance running intensive program
- - [ ] `--help` `-h` flags
- - [x] warn about rm being not undoable
- - [ ] exercises
- - [ ] teach them to figure things out for themselves
- - [ ] integrate tips from `/users/jy2wong/unix101`
- - [ ] put `/users/jy2wong/unix101` into repo
- 
- 
-Things I might add:
- - `*` globbing pattern
- - recursive deletion
- - `man`
- - writing scripts
- - 
-
 We'll be covering these topics:
  - Why people use the shell 🤔
  - Basics of shell interaction 
@@ -40,7 +15,9 @@ The **shell** (also called **terminal**, or **command line**, I'll be using thes
 Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it. It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
 
 ## Basics of shell interaction
+**If you don't know how to do something, just google it. Practice is a great way to level up your google-fu, and that's a cirtical skill**!
 
+You can also do `man command_name` to read the manual for a comman, or try `command_name -h` or `command_name --help`. 
 
 ### Opening the terminal
 Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution. If you're using the CSCF computers, and your terminal has a `%` in it, type `bash` and hit enter to open up the bash shell.
@@ -204,9 +181,11 @@ To see the history of the commands you've run, use the `history` command.
 ### Mildly interesting demo (ssh)
 We're going to use `ssh` to log into one of the Computer Science Club computers. 
 
-`ssh $acount@high-fructose-corn-syrup.csclub.uwaterloo.ca`
+`ssh unix101@corn-syrup.csclub.uwaterloo.ca`
 
-Then run `htop`.
+(I'll give you the password IRL).
+
+Then run `htop` (or `node test.js`).
 
 ### Further learning! :fireworks:
 I'll provide a list of useful commands, programs or concepts that will be useful in your journey to Unix mastership:
@@ -220,3 +199,31 @@ I'll provide a list of useful commands, programs or concepts that will be useful
  - `.bash_aliases` you can put useful aliases here. For example, I added in `alias l='ls'`, and now I can type `l` instead of `ls`.
  - `grep`, is used for searching text. 
  - [Hidden files](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory)
+ 
+ 
+ 
+ ### Misc
+ Todo:
+ - [x] rearrange emoji
+ - [x] finish first draft
+ - [x] proofread
+ - [x] get people to review
+ - [x] sell people harder on why they should care
+ - [x] alt+f2 for terminals, cmd+space on mac
+ - [x] input can be broken up into commands, arguments, and flags
+ - [ ] navigating `less` output
+ - [x] demo of SSH into instance running intensive program
+ - [x] `--help` `-h` flags
+ - [x] warn about rm being not undoable
+ - [ ] exercises
+ - [x] teach them to figure things out for themselves
+ - [ ] integrate tips from `/users/jy2wong/unix101`
+ - [ ] put `/users/jy2wong/unix101` into repo
+ 
+ 
+Things I might add:
+ - `*` globbing pattern
+ - recursive deletion
+ - `man`
+ - writing scripts
+ - 
