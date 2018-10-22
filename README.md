@@ -8,7 +8,10 @@ We'll be covering these topics:
  - Some fun commands :slightly_smiling_face:
  - `history`
  - Further learning! `head`, `tail`, `ssh`, `git`, `tmux`, `scp`, `vim`, `.bash_aliases`, `grep`, hidden files.
- 
+
+## To log into the lab machines:
+user: csc03
+pass: Nux30817
 
 ## Why people use the shell :woman_shrugging:
 The **shell** (also called **terminal**, or **command line**, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
