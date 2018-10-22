@@ -12,7 +12,10 @@ We'll be covering these topics:
 
 ## Why people use the shell :woman_shrugging:
 The **shell** (also called **terminal**, or **command line**, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
-Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it. It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
+
+Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it. 
+
+It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
 
 ## Basics of shell interaction
 **If you don't know how to do something, just google it. Practice is a great way to level up your google-fu, and that's a cirtical skill**!
