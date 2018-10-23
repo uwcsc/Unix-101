@@ -62,9 +62,6 @@ Instead, we will use a command called `touch`. This will create an empty file fo
 
 Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created successfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that **if a program doesn't output anything, it executed successfully**.
 
-You can also check what the return code was with `echo $?` 
-if the answer is 0 then it was a successful exit. 
-
 ### Finding the file we just created (ls) :mag:
 Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in `your-working-directory`.
 
