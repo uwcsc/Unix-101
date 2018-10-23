@@ -14,16 +14,16 @@ user: csc03
 pass: Nux30817
 
 ## Why people use the shell :woman_shrugging:
-The **shell** (also called **terminal**, or **command line**, I'll be using these interchangeably) is really powerful, a lot more powerful that programs with GUI's (Graphical User Interfaces).
+The **shell** (also called **terminal**, or **command line**, I'll be using these interchangeably) is really powerful, a lot more powerful than programs with GUI's (Graphical User Interfaces).
 
-Lots of programs only really work for the command line, and almost every software professional :woman_technologist: knows their way around it. 
+Lots of programs only really work from the command line, and almost every software professional :woman_technologist: knows their way around it. 
 
 It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
 
 ## Basics of shell interaction
 **If you don't know how to do something, just google it. Practice is a great way to level up your google-fu, and that's a cirtical skill**!
 
-You can also do `man command_name` to read the manual for a comman, or try `command_name -h` or `command_name --help`. 
+You can also do `man command_name` to read the manual for a command, or try `command_name -h` or `command_name --help`. 
 
 ### Opening the terminal
 Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution. If you're using the CSCF computers, and your terminal has a `%` in it, type `bash` and hit enter to open up the bash shell.
@@ -58,17 +58,19 @@ Here's a breakdown of what you just did:
 ### Creating a file (touch) :point_down:
 Let's make a file. In a GUI program with a nice user interface, we might right click in the file explorer, and click 'New File', but we can't do that in the terminal.
 
-Instead we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
+Instead, we will use a command called `touch`. This will create an empty file for us. Let's type `touch myFile.txt` into the terminal.
 
-Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created succesfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that **if a program doesn't output anything, it executed succesfuly**.
+Once you've done that, you might notice you don't get any feedback, there's nothing that says "File created successfully" or anything, you just see a new prompt to enter a new command. This is normal, in Unix there is a convention that **if a program doesn't output anything, it executed successfully**.
 
+You can also check what the return code was with `echo $?` 
+if the answer is 0 then it was a successful exit. 
 
 ### Finding the file we just created (ls) :mag:
 Remember the `your-working-directory` part of the terminal prompt we talked about earlier? That is where your terminal is currently open to. When we used `touch`, the file we created was created in `your-working-directory`.
 
 Lets list the files in our current directory. To do this, we use the command called `ls` 
 
- > :speech_balloon: `ls` Sounds kinda like "list". Often times unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
+ > :speech_balloon: `ls` Sounds kinda like "list". Often times Unix commands will be really short, like `rm` instead of "remove", this is so you have to type less).
 
 At this point, our terminal might look something like this (The specific files and folders you see will probably be different from mine):
 
