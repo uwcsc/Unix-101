@@ -17,12 +17,12 @@ Lots of programs only really work from the command line, and almost every softwa
 It's a critical skill to have :moneybag:. Also you can look like a leet hacker.
 
 ## Basics of shell interaction
-**If you don't know how to do something, just google it. Practice is a great way to level up your google-fu, and that's a cirtical skill**!
+**If you don't know how to do something, just google it. Practice is a great way to level up your google-fu, and that's a critical skill**!
 
 You can also do `man command_name` to read the manual for a command, or try `command_name -h` or `command_name --help`. 
 
 ### Opening the terminal
-Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution. If you're using the CSCF computers, and your terminal has a `%` in it, type `bash` and hit enter to open up the bash shell.
+Linux :penguin:: On Ubuntu, Ctrl+Alt+T will open a terminal. Or try hitting the Windows key or Alt+F2 and type in `terminal` or `gnome-terminal`.  Otherwise, this might depend on your Linux distribution. If you're using the CSCF computers, and your terminal has a `%` in it, type `bash` and hit enter to open up the bash shell.
 
 MacOS :apple:: Open up the application called Terminal (you can use Cmd+Space and type in Terminal). In the future, if you start to use the terminal more, you may want to install [iTerm2](https://www.iterm2.com/), as it's nicer and more powerful than the default.
 
